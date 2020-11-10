@@ -13,7 +13,7 @@ var connection = mysql.createConnection({
 //执行创建连接 
 connection.connect();
 //SQL语句
-var sql = 'SELECT * FROM yushuwu where yid = ?';
+var sql = 'SELECT * FROM yushuwu where yid = ? order by chapter';
 
 router.get('/:yid/', function (req, res, next) {
   //解析请求参数
